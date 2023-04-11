@@ -21,13 +21,14 @@ body {
 }
 
 a {
-  color: #D8C8C8;
+  color: #c70c5a;
   text-decoration: none;
 }
 
 a:hover {
-  color: #37b3ed;
+  color: #D8C8C8;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 h1,
@@ -1102,6 +1103,11 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+@media (min-width: 600px) {
+  .mobileonly {
+    display: none;
+  }
+}
 
 
 .badge {
