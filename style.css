@@ -2372,3 +2372,70 @@ footer a:hover {
     height: auto;
     display: block;
 }
+
+/* Mobile Cursor Fix */
+@media (max-width: 768px) {
+    /* Hide the custom cursor by default on mobile */
+    .cursor-dot, 
+    .cursor-ring {
+        display: none;
+    }
+
+    /* Show the dot only when the user is actively touching the screen */
+    body:active .cursor-dot {
+        display: block;
+        width: 20px;
+        height: 20px;
+        opacity: 0.5;
+    }
+    
+    /* Ensure the default system cursor is visible on mobile if needed, 
+       though most mobile browsers handle this automatically */
+    body {
+        cursor: auto;
+    }
+}
+
+/* Project Info Mobile Optimization */
+@media (max-width: 768px) {
+    .project-info {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 0.8rem;
+        padding: 1.2rem;
+        border-radius: 8px;
+        background: #ffffff;
+    }
+
+    .info-cell {
+        grid-column: span 1 !important; /* Force cells to take full width */
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .info-cell:last-child {
+        border-bottom: none;
+    }
+
+    .info-label {
+        font-size: 0.6rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .info-val {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    /* Adjust the Pills/Tags for better wrapping */
+    .resp-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .resp-pill {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
