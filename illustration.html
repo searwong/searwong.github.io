@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Illustration — Searwong</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" onclick="closeMobileMenu()">Home</a>
+        <a href="index.html#works" onclick="closeMobileMenu()">Works</a>
+        <a href="index.html#about" onclick="closeMobileMenu()">About</a>
+        <a href="index.html#contact" onclick="closeMobileMenu()" class="mob-cta">Contact</a>
+    </div>
+    <header class="main-nav always-filled">
+        <a href="index.html" class="nav-logo"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+                    <defs>
+                        <style>
+                        .text-sear {
+                            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                            font-weight: 800;
+                            font-size: 32px;
+                            letter-spacing: 2px;
+                            fill: #2c3e50;
+                            transform-origin: 80px 25px;
+                            animation: fadeText 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+                        }
+
+                        .eyes-group {
+                            transform-origin: 80px 25px;
+                            animation: fadeEyes 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+                            opacity: 0;
+                        }
+
+                        .pupil {
+                            animation: lookAround 8s infinite;
+                        }
+
+                        /* Animation to fade out and scale down the text */
+                        @keyframes fadeText {
+
+                            0%,
+                            25% {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+
+                            30%,
+                            70% {
+                                opacity: 0;
+                                transform: scale(0.8);
+                                pointer-events: none;
+                            }
+
+                            75%,
+                            100% {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+                        }
+
+                        /* Animation to fade in and scale up the eyes */
+                        @keyframes fadeEyes {
+
+                            0%,
+                            25% {
+                                opacity: 0;
+                                transform: scale(0.8);
+                                pointer-events: none;
+                            }
+
+                            30%,
+                            70% {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+
+                            75%,
+                            100% {
+                                opacity: 0;
+                                transform: scale(0.8);
+                                pointer-events: none;
+                            }
+                        }
+
+                        /* Animation for the pupils to look left, right, up, and down */
+                        @keyframes lookAround {
+
+                            0%,
+                            30% {
+                                transform: translate(0, 0);
+                            }
+
+                            35%,
+                            42% {
+                                transform: translate(-6px, 0);
+                            }
+
+                            /* Look Left */
+                            46%,
+                            54% {
+                                transform: translate(6px, -3px);
+                            }
+
+                            /* Look Right and Up */
+                            58%,
+                            65% {
+                                transform: translate(0px, 4px);
+                            }
+
+                            /* Look Down */
+                            70%,
+                            100% {
+                                transform: translate(0, 0);
+                            }
+
+                            /* Center */
+                        }
+                        </style>
+                    </defs>
+                    <text x="80" y="36" class="text-sear" text-anchor="middle">SEAR</text>
+                    <g class="eyes-group">
+                        <g>
+                            <path d="M 45 25 Q 60 10 75 25 Q 60 40 45 25 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="3.5" stroke-linejoin="round" />
+                            <circle cx="60" cy="25" r="5.5" fill="#2c3e50" class="pupil" />
+                        </g>
+                        <g>
+                            <path d="M 85 25 Q 100 10 115 25 Q 100 40 85 25 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="3.5" stroke-linejoin="round" />
+                            <circle cx="100" cy="25" r="5.5" fill="#2c3e50" class="pupil" />
+                        </g>
+                    </g>
+                </svg></span></a>
+        <ul class="nav-links">
+            <li><a href="index.html#works" class="active">Works</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </header>
+    <div class="page-hero">
+        <div>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span class="current">Illustration</span>
+            </div>
+            <h1>Illustra-<br>tion</h1>
+            <p class="page-hero-desc">Work alongside campaign teams to create illustrations for promotional materials and game assets, including character design, background illustration, and Live2D rigging.</p>
+        </div>
+        <div class="page-hero-meta">
+            <span class="project-count">04</span>
+            <span class="project-count-label">Projects</span>
+        </div>
+    </div>
+    <div class="page-body">
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <p class="sidebar-section-title">Categories</p>
+                <nav class="sidebar-nav">
+                    <a href="brand.html"><span class="nav-dot"></span>Brand Identity</a>
+                    <a href="graphic.html"><span class="nav-dot"></span>Graphic Design</a>
+                    <a href="illustration.html" class="active"><span class="nav-dot"></span>Illustration</a>
+                    <a href="video.html"><span class="nav-dot"></span>Video</a>
+                    <a href="web.html"><span class="nav-dot"></span>Web Design</a>
+                    <a href="3d.html"><span class="nav-dot"></span>3D Graphic</a>
+                </nav>
+            </div>
+            <div class="sidebar-section">
+                <p class="sidebar-section-title">On This Page</p>
+                <nav class="jump-nav" id="jumpNav">
+                    <a href="#proj-1" class="jump-link active">Verajohn — Character</a>
+                    <a href="#proj-2" class="jump-link">InterCasino — Comic &amp; Illust</a>
+                    <a href="#proj-3" class="jump-link">Golden Hero — Mimi</a>
+                    <a href="#proj-4" class="jump-link">Freelance — Live2D</a>
+                </nav>
+            </div>
+        </aside>
+        <main class="content">
+            <!-- PROJECT 1 — Freelance Illustration -->
+            <div class="project-block reveal" id="proj-1">
+                <div class="project-tag">Freelance Project — Illustration</div>
+                <div class="img-single">
+                    <img src="images/portfolio/4-illust/2025-12-illust-1.jpg" alt="Freelance Illustration 1">
+                </div>
+                <div class="project-tag">Print Merchandise Acrylic Blocks</div>
+                <div class="img-single">
+                    <img src="images/portfolio/4-illust/2025-12-illust-2.jpg" alt="Freelance Illustration 2">
+                </div>
+                <div class="project-info">
+                    <div class="info-cell">
+                        <p class="info-label">Company</p>
+                        <p class="info-val">Freelance</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Brand</p>
+                        <p class="info-val">—</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Project Date</p>
+                        <p class="info-val">Dec 2025</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Role</p>
+                        <p class="info-val">—</p>
+                    </div>
+                    <div class="info-cell" style="grid-column:span 4;">
+                        <p class="info-label">Responsible</p>
+                        <div class="resp-pills">
+                            <span class="resp-pill">Character Design</span>
+                            <span class="resp-pill">Character Illustration</span>
+                            <span class="resp-pill">Costume Design</span>
+                            <span class="resp-pill">Background Illustration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="section-divider">
+            <!-- PROJECT 2 — InterCasino Comic & Illustration -->
+            <div class="project-block reveal" id="proj-2">
+                <div class="project-tag">Brand Comic</div>
+                <div class="img-single"><img src="images/portfolio/4-illust/ic-comic-1.png" alt="InterCasino Brand Comic 1"></div>
+                <div class="img-single"><img src="images/portfolio/4-illust/ic-comic-2.png" alt="InterCasino Brand Comic 2"></div>
+                <div class="project-tag">Background Illustration</div>
+                <div class="img-single"><img src="images/portfolio/4-illust/ic-background3.png" alt="InterCasino Background Illustration"></div>
+                <div class="project-tag">Design &amp; Illustration — Christmas Card</div>
+                <div class="img-single"><img src="images/portfolio/4-illust/ic-masxcard.jpg" alt="InterCasino Christmas Card"></div>
+                <div class="project-info">
+                    <div class="info-cell">
+                        <p class="info-label">Company</p>
+                        <p class="info-val">Bally's Interactive</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Brand</p>
+                        <p class="info-val">InterCasino (JP)</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Project Date</p>
+                        <p class="info-val">Nov 2019 — May 2022</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Role</p>
+                        <p class="info-val">Senior Graphic Designer</p>
+                    </div>
+                    <div class="info-cell" style="grid-column:span 4;">
+                        <p class="info-label">Responsible</p>
+                        <div class="resp-pills">
+                            <span class="resp-pill">Character Design</span>
+                            <span class="resp-pill">Character Illustration</span>
+                            <span class="resp-pill">Costume Design</span>
+                            <span class="resp-pill">Background Illustration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="section-divider">
+            <!-- PROJECT 3 — Golden Hero Mimi -->
+            <div class="project-block reveal" id="proj-3">
+                <div class="project-tag">Character Design &amp; Illustration</div>
+                <div class="img-single"><img src="images/portfolio/4-illust/mimi-1.png" alt="Mimi Character Design"></div>
+                <div class="img-single"><img src="images/portfolio/4-illust/mimi-2.png" alt="Mimi Character Illustration"></div>
+                <div class="project-info">
+                    <div class="info-cell">
+                        <p class="info-label">Company</p>
+                        <p class="info-val">Bally's Interactive</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Brand</p>
+                        <p class="info-val">Golden Hero — Mimi and the Magic Staff</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Project Date</p>
+                        <p class="info-val">Nov 2019 — May 2022</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Role</p>
+                        <p class="info-val">Senior Graphic Designer</p>
+                    </div>
+                    <div class="info-cell" style="grid-column:span 4;">
+                        <p class="info-label">Responsible</p>
+                        <div class="resp-pills">
+                            <span class="resp-pill">Character Design</span>
+                            <span class="resp-pill">Character Illustration</span>
+                            <span class="resp-pill">Graphic Assets</span>
+                            <span class="resp-pill">Spine2D Animation Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="section-divider">
+            <!-- PROJECT 4 — Freelance Live2D -->
+            <div class="project-block reveal" id="proj-4">
+                <div class="project-tag">Live2D — Character</div>
+                <div class="img-single"><img src="images/portfolio/4-illust/live2d-1.png" alt="Live2D Character"></div>
+                <div class="video-single media-embed">
+                    <video src="images/portfolio/4-illust/live2d-10sec.mp4" controls style="max-width: 600px;"></video>
+                </div>
+                <div class="project-info">
+                    <div class="info-cell">
+                        <p class="info-label">Company</p>
+                        <p class="info-val">Freelance</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Project Date</p>
+                        <p class="info-val">Sept 2021</p>
+                    </div>
+                    <div class="info-cell" style="grid-column:span 2;">
+                        <p class="info-label">Responsible</p>
+                        <div class="resp-pills">
+                            <span class="resp-pill">Character Design</span>
+                            <span class="resp-pill">Character Illustration</span>
+                            <span class="resp-pill">Live2D Rigging</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="lightbox" id="lightbox"><button class="lightbox-close" id="lbClose">✕</button><img src="" alt="" id="lbImg"></div>
+    <footer>
+        <a href="index.html" class="footer-logo">SEAR<span>.</span></a>
+        <span>© 2025 Searwong. All rights reserved.</span>
+        <a href="index.html#works">← Back to Works</a>
+    </footer>
+    <script>
+    const dot = document.getElementById('cursorDot'),
+        ring = document.getElementById('cursorRing');
+    let mx = 0,
+        my = 0,
+        rx = 0,
+        ry = 0;
+    document.addEventListener('mousemove', e => {
+        mx = e.clientX;
+        my = e.clientY;
+        dot.style.left = mx + 'px';
+        dot.style.top = my + 'px';
+    });
+    (function animRing() {
+        rx += (mx - rx) * .13;
+        ry += (my - ry) * .13;
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+        requestAnimationFrame(animRing);
+    })();
+    document.querySelectorAll('a,button,.img-cell').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            dot.classList.add('hovered');
+            ring.classList.add('hovered');
+        });
+        el.addEventListener('mouseleave', () => {
+            dot.classList.remove('hovered');
+            ring.classList.remove('hovered');
+        });
+    });
+    document.addEventListener('mousedown', () => dot.classList.add('clicked'));
+    document.addEventListener('mouseup', () => dot.classList.remove('clicked'));
+    const burger = document.getElementById('burger'),
+        mobileMenu = document.getElementById('mobileMenu');
+    let menuOpen = false;
+
+    function closeMobileMenu() {
+        menuOpen = false;
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    burger.addEventListener('click', () => {
+        menuOpen = !menuOpen;
+        burger.classList.toggle('open', menuOpen);
+        mobileMenu.classList.toggle('open', menuOpen);
+        document.body.style.overflow = menuOpen ? 'hidden' : '';
+    });
+    const lightbox = document.getElementById('lightbox'),
+        lbImg = document.getElementById('lbImg');
+    document.querySelectorAll('.img-single img').forEach(img => {
+        img.addEventListener('click', () => {
+            lbImg.src = img.src;
+            lightbox.classList.add('open');
+        });
+    });
+    document.getElementById('lbClose').addEventListener('click', () => lightbox.classList.remove('open'));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
+    const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    const jumpLinks = document.querySelectorAll('.jump-link');
+    const jumpObs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { jumpLinks.forEach(l => l.classList.remove('active')); const link = document.querySelector(`.jump-link[href="#${e.target.id}"]`); if (link) link.classList.add('active'); } }); }, { rootMargin: '-20% 0px -60% 0px' });
+    document.querySelectorAll('.project-block').forEach(p => jumpObs.observe(p));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <defs>
+    <style>
+      .text-sear {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 32px;
+        letter-spacing: 2px;
+        fill: #2c3e50;
+        transform-origin: 80px 25px;
+        animation: fadeText 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .eyes-group {
+        transform-origin: 80px 25px;
+        animation: fadeEyes 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
+      }
+      
+      .pupil {
+        animation: lookAround 8s infinite;
+      }
+      
+      /* Animation to fade out and scale down the text */
+      @keyframes fadeText {
+        0%, 25% { opacity: 1; transform: scale(1); }
+        30%, 70% { opacity: 0; transform: scale(0.8); pointer-events: none; }
+        75%, 100% { opacity: 1; transform: scale(1); }
+      }
+      
+      /* Animation to fade in and scale up the eyes */
+      @keyframes fadeEyes {
+        0%, 25% { opacity: 0; transform: scale(0.8); pointer-events: none; }
+        30%, 70% { opacity: 1; transform: scale(1); }
+        75%, 100% { opacity: 0; transform: scale(0.8); pointer-events: none; }
+      }
+
+      /* Animation for the pupils to look left, right, up, and down */
+      @keyframes lookAround {
+        0%, 30% { transform: translate(0, 0); }
+        35%, 42% { transform: translate(-6px, 0); }    /* Look Left */
+        46%, 54% { transform: translate(6px, -3px); }  /* Look Right and Up */
+        58%, 65% { transform: translate(0px, 4px); }   /* Look Down */
+        70%, 100% { transform: translate(0, 0); }      /* Center */
+      }
+    </style>
+  </defs>
+
+  <text x="80" y="36" class="text-sear" text-anchor="middle">SEAR</text>
+
+  <g class="eyes-group">
+    <g>
+      <path d="M 45 25 Q 60 10 75 25 Q 60 40 45 25 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="3.5" stroke-linejoin="round"/>
+      <circle cx="60" cy="25" r="5.5" fill="#2c3e50" class="pupil" />
+    </g>
+    <g>
+      <path d="M 85 25 Q 100 10 115 25 Q 100 40 85 25 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="3.5" stroke-linejoin="round"/>
+      <circle cx="100" cy="25" r="5.5" fill="#2c3e50" class="pupil" />
+    </g>
+  </g>
+</svg>

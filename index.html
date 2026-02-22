@@ -2,259 +2,491 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Sear's Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Updated: Mar 10 2023 with Bootstrap v5.2.3
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Searwong — Creative Portfolio</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </head>
 
 <body>
-
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.gif" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Sear Wong</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="mailto:searwong@gmail.com" class="linkedin"><i class="bi bi-envelope-fill"></i></a>
-          <a href="https://www.linkedin.com/in/sear-wong/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Works</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          
-        </ul>
-      </nav><!-- .nav-menu -->
+    <!-- CURSOR -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#works" onclick="closeMobileMenu()">Works</a>
+        <a href="#about" onclick="closeMobileMenu()">About</a>
+        <a href="#services" onclick="closeMobileMenu()">Services</a>
+        <a href="#process" onclick="closeMobileMenu()">Process</a>
+        <a href="#contact" onclick="closeMobileMenu()" class="mob-cta">Contact</a>
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section 
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Alex Smith</h1>
-      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
-    </div>
-  </section> End Hero -->
-
-  <main id="main">
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h3 class="mobileonly">Sear Wong' Portfolio</h3>
-          <h2>Works</h2>
-        </div>
-<div class="col-lg-4 col-md-6" data-aos="fade-in">
+    <!-- NAV — scrolled class added by JS on scroll -->
+    <header class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-logo"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <defs>
+    <style>
+      .text-sear {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 32px;
+        letter-spacing: 2px;
+        fill: #2c3e50;
+        transform-origin: 80px 25px;
+        animation: fadeText 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+      }
       
-      <h3>I works on <span class="typed" data-typed-items="2D Graphics, Illustrations, 3D Models, Animations, UI designs"></span></h3>
-    </div>
-        <!--div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>-->
+      .eyes-group {
+        transform-origin: 80px 25px;
+        animation: fadeEyes 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
+      }
+      
+      .pupil {
+        animation: lookAround 8s infinite;
+      }
+      
+      /* Animation to fade out and scale down the text */
+      @keyframes fadeText {
+        0%, 25% { opacity: 1; transform: scale(1); }
+        30%, 70% { opacity: 0; transform: scale(0.8); pointer-events: none; }
+        75%, 100% { opacity: 1; transform: scale(1); }
+      }
+      
+      /* Animation to fade in and scale up the eyes */
+      @keyframes fadeEyes {
+        0%, 25% { opacity: 0; transform: scale(0.8); pointer-events: none; }
+        30%, 70% { opacity: 1; transform: scale(1); }
+        75%, 100% { opacity: 0; transform: scale(0.8); pointer-events: none; }
+      }
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+      /* Animation for the pupils to look left, right, up, and down */
+      @keyframes lookAround {
+        0%, 30% { transform: translate(0, 0); }
+        35%, 42% { transform: translate(-6px, 0); }    /* Look Left */
+        46%, 54% { transform: translate(6px, -3px); }  /* Look Right and Up */
+        58%, 65% { transform: translate(0px, 4px); }   /* Look Down */
+        70%, 100% { transform: translate(0, 0); }      /* Center */
+      }
+    </style>
+  </defs>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/1-Monkaji.png" class="img-fluid rounded" alt="">
-              <div class="portfolio-links">                
-                <a href="monkaji-details.html" title="More Details"><i class="bi bi-hand-index-thumb"></i></a>
-              </div>
-            </div>
-          </div>
+  <text x="80" y="36" class="text-sear" text-anchor="middle">SEAR</text>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/2-Graphic.png" class="img-fluid rounded" alt="">
-              <div class="portfolio-links">
-                <a href="graphics-details.html" title="More Details"><i class="bi bi-hand-index-thumb"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/3-3D.png" class="img-fluid rounded" alt="">
-              <div class="portfolio-links">
-                <a href="3dgraphics-details.html" title="More Details"><i class="bi bi-hand-index-thumb"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/5-illustration.png" class="img-fluid rounded" alt="">
-              <div class="portfolio-links">
-                <a href="illust-details.html" title="More Details"><i class="bi bi-hand-index-thumb"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/4-Video.gif" class="img-fluid rounded" alt="" style="width:100% ;">
-              <div class="portfolio-links">
-                <a href="video-details.html" title="More Details"><i class="bi bi-hand-index-thumb"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/6-Web.png" class="img-fluid rounded" alt="">
-              <div class="portfolio-links">
-                <a href="web-details.html" title="More Details"><i class="bi bi-hand-index-thumb"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <p>Hello! My name is Sear Wong. <br>I was born and raised in Hong Kong, a city mix of Asia and Western influences. As some who graduate from School of Creative Media, creative is my lifestyle, I enjoy expressing my ideas and emotions with different media and technologies.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.gif" class="img-fluid rounded-circle" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Multimedia Designer</h3>
-            <p class="fst-italic">
-              I have over 6 years of experience in the design field. With my wide range of design skills and experiences, I have the right background for your brand's needs.
+  <g class="eyes-group">
+    <g>
+      <path d="M 45 25 Q 60 10 75 25 Q 60 40 45 25 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="3.5" stroke-linejoin="round"/>
+      <circle cx="60" cy="25" r="5.5" fill="#2c3e50" class="pupil" />
+    </g>
+    <g>
+      <path d="M 85 25 Q 100 10 115 25 Q 100 40 85 25 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="3.5" stroke-linejoin="round"/>
+      <circle cx="100" cy="25" r="5.5" fill="#2c3e50" class="pupil" />
+    </g>
+  </g>
+</svg></span></a>
+        <ul class="nav-links">
+            <li><a href="#works">Works</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-left">
+            <p class="hero-eyebrow">Creative Portfolio</p>
+            <h1 class="hero-title">
+                Sear to Seer<br>
+                <span class="line-italic">I burn bright</span><br>
+                <span class="line-accent">and see beyond.</span>
+            </h1>
+            <p class="hero-desc">
+                Crafting design that sparks, motion that moves, and visuals that reveal more than meets the eye.
             </p>
-                 <!-- ======= Services Section ======= -->
-    <div id="services" class="services">
-      <div class="container">
-        <div class="section-title">
-          <h2>Skills</h2>
+            <div class="hero-actions">
+                <a href="#works" class="btn-primary">
+                    View Portfolio
+                    <svg width="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                </a>
+                <a href="#contact" class="btn-ghost">Let's Work Together</a>
+            </div>
         </div>
-
-        <div class="row">
-          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-brush"></i></div>
-            <h4 class="title">2D</h4>
-            <p class="description"><strong>Adobe Creative Suite:</strong> Photoshop, Illustrator, Premiere Pro, After Effects<br>
-              <strong>Clip Studio Paint</strong><br>
-              <strong>Live 2D</strong></p>
-          </div>
-          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-box"></i></div>
-            <h4 class="title">3D</h4>
-            <p class="description"><strong>Blender:</strong> 3D modeling, texture, rigging, animation</p>
-          </div>
-          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-filetype-html"></i></div>
-            <h4 class="title">Web</h4>
-            <p class="description"><strong>HTML5, CSS</strong><br> Figma, Adobe XD, Wordpress, SVGator, Bannerflow, ShortStack</p>
-          </div>
-          <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-chat-dots"></i></div>
-            <h4 class="title">Langauge</h4>
-            <p class="description">
-              <strong>Native:</strong> Cantonese, Chinese<br>
-              <strong>Fluent:</strong> English, Japanese (JLPT N1)<br>
-            </p>
-          </div>
-
+        <div class="hero-visual">
+            <div class="hero-photo-wrap">
+                <div class="hero-photo">
+                    <img src="images/profile-img.gif" alt="cover images" />
+                </div>
+                <div class="hero-tag-chip" style="z-index: 10;">✦ Multimedia Designer</div>
+                <div class="hero-tag-chip" style="z-index: 10;"><span class="iconify" data-icon="svg-spinners:12-dots-scale-rotate"></span>  Graphics · Video · Motion · AI</div>
+            </div>
         </div>
-
-      </div>
-    </div><!-- End Services Section -->
-            
-          </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            Scroll
         </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-
-   
-
-    
-
-   
-
-    
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      Last updated on Apr 2023.
-     
+    </section>
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <div class="marquee-item"><span class="marquee-dot"></span>Brand Identity</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>Graphic Design</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>Illustration</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>Video Production</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>Web Design</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>3D Graphics</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>Motion Design</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>Animation</div>
+            <!-- duplicate for seamless loop -->
+            <div class="marquee-item"><span class="marquee-dot"></span>Brand Identity</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>Graphic Design</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>Illustration</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>Video Production</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>Web Design</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>3D Graphics</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>Motion Design</div>
+            <div class="marquee-item"><span class="marquee-dot"></span>Animation</div>
+        </div>
     </div>
-  </footer><!-- End  Footer -->
+    <!-- WORKS / PORTFOLIO -->
+    <section id="works">
+        <div class="works-intro">
+            <div>
+                <div class="section-eyebrow reveal">Portfolio</div>
+                <h2 class="section-title reveal reveal-delay-1">Selected Works</h2>
+                <p class="reveal reveal-delay-2">Click any category to explore the full collection.</p>
+            </div>
+        </div>
+        <div class="portfolio-grid">
+            <a href="brand.html" class="portfolio-card reveal" data-cat="brand">
+                <div class="portfolio-card-bg"><img src="images/portfolio/top-thumbnail-1-Monkaji.png" alt="Brand Identity" /></div>
+                <div class="portfolio-card-overlay">
+                    <div class="portfolio-card-cat">MONKAJI ✦ Brand, Designs, Visual Assets</div>
+                    <div class="portfolio-card-name">Brand Identity</div>
+                    <div class="portfolio-card-arrow">Explore →</div>
+                </div>
+            </a>
+            <a href="graphic.html" class="portfolio-card reveal reveal-delay-1" data-cat="graphic">
+                <div class="portfolio-card-bg"><img src="images/portfolio/top-thumbnail-2-Graphic.png" alt="Graphic Design" /></div>
+                <div class="portfolio-card-overlay">
+                    <div class="portfolio-card-cat">Banners, Visual Design</div>
+                    <div class="portfolio-card-name">Graphic Design</div>
+                    <div class="portfolio-card-arrow">Explore →</div>
+                </div>
+            </a>
+            <a href="video.html" class="portfolio-card reveal" data-cat="video">
+                <div class="portfolio-card-bg"><img src="images/portfolio/top-thumbnail-4-Video.gif" alt="Video" /></div>
+                <div class="portfolio-card-overlay">
+                    <div class="portfolio-card-cat">Motion Graphics, Animations</div>
+                    <div class="portfolio-card-name">Video</div>
+                    <div class="portfolio-card-arrow">Explore →</div>
+                </div>
+            </a>
+            <a href="illustration.html" class="portfolio-card reveal reveal-delay-2" data-cat="illus">
+                <div class="portfolio-card-bg"><img src="images/portfolio/top-thumbnail-5-illustration.png" alt="Illustration" /></div>
+                <div class="portfolio-card-overlay">
+                    <div class="portfolio-card-cat">Drawing, Comic, Live2D</div>
+                    <div class="portfolio-card-name">Illustration</div>
+                    <div class="portfolio-card-arrow">Explore →</div>
+                </div>
+            </a>            
+            <a href="web.html" class="portfolio-card reveal reveal-delay-1" data-cat="web">
+                <div class="portfolio-card-bg"><img src="images/portfolio/top-thumbnail-6-Web.png" alt="Web Design" /></div>
+                <div class="portfolio-card-overlay">
+                    <div class="portfolio-card-cat">UI/UX, Landing Page</div>
+                    <div class="portfolio-card-name">Web Design</div>
+                    <div class="portfolio-card-arrow">Explore →</div>
+                </div>
+            </a>
+            <a href="3d.html" class="portfolio-card reveal reveal-delay-2" data-cat="3d">
+                <div class="portfolio-card-bg"><img src="images/portfolio/top-thumbnail-3-3D.png" alt="3D Graphic" /></div>
+                <div class="portfolio-card-overlay">
+                    <div class="portfolio-card-cat">Modeling, Texture, Animations</div>
+                    <div class="portfolio-card-name">3D Graphic</div>
+                    <div class="portfolio-card-arrow">Explore →</div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-photo-col reveal">
+                <div class="about-photo-wrap">
+                    <div class="about-photo">
+                        <img src="images/profile-img.gif" alt="Sear" />
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="about-intro reveal reveal-delay-1">
+                    <div class="section-eyebrow">About Me</div>
+                    <h2 class="section-title"><span class="iconify" data-icon="line-md:downloading-loop"></span> Professional <br>Multimedia Designer</h2>
+                    <p>I'm Sear Wong, a multidisciplinary creative born and raised in Hong Kong—a city where East meets West and inspires my perspective. With <strong>over 8 years</strong> of experience in <strong>graphic design, video production, illustration, 3D, and web</strong>, I transform ideas into bold, purposeful stories.</p>
+                    <p>Graduating from the School of Creative Media shaped my belief that creativity is more than a skill—it's a way of life. From concept to final delivery, across digital, print, and motion, I bring together technical precision and artistic vision to craft work that resonates.</p>
+                </div>
+                <div class="skills-sections reveal reveal-delay-2">
+                    <div class="skill-group open">
+                        <div class="skill-group-header" onclick="toggleSkill(this)">
+                            <h4><i class="fa-solid fa-pencil"></i> 2D & Motion Graphics</h4>
+                            <div class="skill-toggle">+</div>
+                        </div>
+                        <div class="skill-group-body">
+                            <div class="skill-group-inner">
+                                <div class="skill-pills">
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:photoshop"></span> Photoshop</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:illustrator"></span> Illustrator</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:aftereffects"></span> After Effects</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:premierepro"></span> Premiere Pro</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="simple-icons:clipstudio"></span> Clip Studio Paint</span>
+                                    <span class="skill-pill"> Live2D</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group open">
+                        <div class="skill-group-header" onclick="toggleSkill(this)">
+                            <h4><i class="fa-solid fa-robot"></i> AI tools</h4>
+                            <div class="skill-toggle">+</div>
+                        </div>
+                        <div class="skill-group-body">
+                            <div class="skill-group-inner">
+                                <div class="skill-pills">
+                                    <span class="skill-pill"><span class="iconify" data-icon="simple-icons:midjourney"></span> Midjourney</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="simple-icons:adobefirefly"></span> Adobe Firefly</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="simple-icons:googlegemini"></span> Nano Banana Pro - Gemini 3</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="simple-icons:anthropic"></span> Claude Code</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group open">
+                        <div class="skill-group-header" onclick="toggleSkill(this)">
+                            <h4><i class="fa-brands fa-figma"></i> Web UIUX</h4>
+                            <div class="skill-toggle">+</div>
+                        </div>
+                        <div class="skill-group-body">
+                            <div class="skill-group-inner">
+                                <div class="skill-pills">
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:html"></span> HTML5</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:css"></span> CSS</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:figma-dark"></span> Figma</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:xd"></span> Adobe XD</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:wordpress"></span> WordPress</span>
+                                    <span class="skill-pill"> Unbounce</span>
+                                    <span class="skill-pill"> Bannerflow</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group open">
+                        <div class="skill-group-header" onclick="toggleSkill(this)">
+                            <h4><i class="fa-solid fa-cube"></i> 3D Skills</h4>
+                            <div class="skill-toggle">+</div>
+                        </div>
+                        <div class="skill-group-body">
+                            <div class="skill-group-inner">
+                                <div class="skill-pills">
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:blender-light"></span> Blender — Modeling</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:blender-light"></span> Blender — Texture</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:blender-light"></span> Blender — Rigging</span>
+                                    <span class="skill-pill"><span class="iconify" data-icon="skill-icons:blender-light"></span> Blender — Animation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-group open">
+                        <div class="skill-group-header" onclick="toggleSkill(this)">
+                            <h4><i class="fa-regular fa-comment-dots"></i> Languages</h4>
+                            <div class="skill-toggle">+</div>
+                        </div>
+                        <div class="skill-group-body">
+                            <div class="skill-group-inner">
+                                <div class="lang-item">
+                                    <div class="lang-badge">🇭🇰 Cantonese 廣東話 <span class="lang-level">Native</span></div>
+                                    <div class="lang-badge">🇨🇳 Chinese 中文 <span class="lang-level">Native</span></div>
+                                    <div class="lang-badge">🇬🇧 English <span class="lang-level">Fluent</span></div>
+                                    <div class="lang-badge">🇯🇵 Japanese 日本語 <span class="lang-level">Fluent · JLPT N1</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-ctas reveal reveal-delay-3">
+                    <a href="#contact" class="btn-primary">Work With Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="section-eyebrow reveal">Services</div>
+        <h2 class="section-title reveal reveal-delay-1">What I Offer</h2>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-num">01</div>
+                <div class="service-icon">🎨</div>
+                <h3 class="service-name">Graphic Design</h3>
+                <p class="service-desc">Brand identities, poster systems, editorial layouts, and print collateral crafted with precision and personality.</p>
+                <div class="service-tags">
+                    <span class="tag">Branding</span><span class="tag">Logo/Icon Design</span>
+                    <span class="tag">Illustration</span><span class="tag">Character Design</span><span class="tag">Landing Page Design</span><span class="tag">Print</span>
+                </div>
+            </div>
+            <div class="service-card reveal reveal-delay-2">
+                <div class="service-num">02</div>
+                <div class="service-icon">✨</div>
+                <h3 class="service-name">Motion & Animation</h3>
+                <p class="service-desc">2D/3D animation, kinetic typography, and motion graphics that move with purpose.</p>
+                <div class="service-tags">
+                    <span class="tag">2D</span><span class="tag">3D</span><span class="tag">Motion Graphics</span><span class="tag">After Effects</span>
+                </div>
+            </div>
+            <div class="service-card reveal reveal-delay-1">
+                <div class="service-num">03</div>
+                <div class="service-icon">🎬</div>
+                <h3 class="service-name">Video Production</h3>
+                <p class="service-desc">Cinematic storytelling — commercials, short films, docs, and social content from concept to color grade.</p>
+                <div class="service-tags">
+                    <span class="tag">Video Editing</span><span class="tag">Cinematography</span><span class="tag">Color Grade</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PROCESS -->
+    <section id="process">
+        <div class="section-eyebrow reveal">How I Work</div>
+        <h2 class="section-title reveal reveal-delay-1">The Process</h2>
+        <div class="process-grid">
+            <div class="process-step reveal">
+                <div class="process-step-num">01</div>
+                <div class="process-step-icon">💬</div>
+                <h3 class="process-step-name">Discovery</h3>
+                <p class="process-step-desc">Understanding your goals, audience, and vision. Every great project starts with the right questions.</p>
+            </div>
+            <div class="process-step reveal reveal-delay-1">
+                <div class="process-step-num">02</div>
+                <div class="process-step-icon">✏️</div>
+                <h3 class="process-step-name">Concept</h3>
+                <p class="process-step-desc">Sketching directions, mood boards, and early prototypes to define the look and feel.</p>
+            </div>
+            <div class="process-step reveal reveal-delay-2">
+                <div class="process-step-num">03</div>
+                <div class="process-step-icon">⚡</div>
+                <h3 class="process-step-name">Creation</h3>
+                <p class="process-step-desc">Full production with regular check-ins and iterations — always aligned, always moving forward.</p>
+            </div>
+            <div class="process-step reveal reveal-delay-3">
+                <div class="process-step-num">04</div>
+                <div class="process-step-icon">🚀</div>
+                <h3 class="process-step-name">Delivery</h3>
+                <p class="process-step-desc">Final polish, files in all required formats, and post-launch support if needed.</p>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="contact-centered reveal">
+            <div class="section-eyebrow">Get In Touch</div>
+            <h2 class="section-title">Let's Make<br>Something Great</h2>
+            <p>Have a project in mind, or just want to say hello? I'm always open to new collaborations and interesting opportunities.</p>
+            <div class="contact-cards reveal reveal-delay-1">
+                <div class="contact-card">
+                    <p class="contact-card-label"><i class="fa-regular fa-envelope"></i> Email</p>
+                    <p class="contact-card-val">searwong@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <p class="contact-card-label"><i class="fa-solid fa-location-dot"></i> Based In</p>
+                    <p class="contact-card-val">Hong Kong</p>
+                </div>
+                <div class="contact-card">
+                    <p class="contact-card-label"><i class="fa-regular fa-thumbs-up"></i> Availability</p>
+                    <p class="contact-card-val">Open for projects ✦</p>
+                </div>
+            </div>
+            <div class="socials reveal reveal-delay-2">
+                <a href="https://www.linkedin.com/in/sear-wong/" class="social-link"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <a href="index.html" class="footer-logo">SEAR<span>.</span></a>
+        <span>© 2026 Searwong. All rights reserved.</span>
+        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
+    </footer>
+    <script>
+    /* ── CURSOR ── */
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0,
+        my = 0,
+        rx = 0,
+        ry = 0;
+    document.addEventListener('mousemove', e => {
+        mx = e.clientX;
+        my = e.clientY;
+        dot.style.left = mx + 'px';
+        dot.style.top = my + 'px';
+    });
+    (function animRing() {
+        rx += (mx - rx) * 0.13;
+        ry += (my - ry) * 0.13;
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+        requestAnimationFrame(animRing);
+    })();
+    document.querySelectorAll('a, button, .portfolio-card, .skill-group-header').forEach(el => {
+        el.addEventListener('mouseenter', () => { dot.classList.add('hovered');
+            ring.classList.add('hovered'); });
+        el.addEventListener('mouseleave', () => { dot.classList.remove('hovered');
+            ring.classList.remove('hovered'); });
+    });
+    document.addEventListener('mousedown', () => dot.classList.add('clicked'));
+    document.addEventListener('mouseup', () => dot.classList.remove('clicked'));
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    /* ── NAV — fills on scroll ── */
+    const mainNav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        mainNav.classList.toggle('filled', window.scrollY > 50);
+    });
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+    /* ── BURGER ── */
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let menuOpen = false;
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    function closeMobileMenu() {
+        menuOpen = false;
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    burger.addEventListener('click', () => {
+        menuOpen = !menuOpen;
+        burger.classList.toggle('open', menuOpen);
+        mobileMenu.classList.toggle('open', menuOpen);
+        document.body.style.overflow = menuOpen ? 'hidden' : '';
+    });
 
+    /* ── SKILL ACCORDION ── */
+    function toggleSkill(header) {
+        header.closest('.skill-group').classList.toggle('open');
+    }
+
+    /* ── SCROLL REVEAL ── */
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    </script>
 </body>
 
 </html>
