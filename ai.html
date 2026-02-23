@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Tools — Searwong</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" onclick="closeMobileMenu()">Home</a>
+        <a href="index.html#works" onclick="closeMobileMenu()">Works</a>
+        <a href="index.html#about" onclick="closeMobileMenu()">About</a>
+        <a href="index.html#contact" onclick="closeMobileMenu()" class="mob-cta">Contact</a>
+    </div>
+    <header class="main-nav always-filled">
+        <a href="index.html" class="nav-logo"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+                    <defs>
+                        <style>
+                        .text-sear {
+                            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                            font-weight: 800;
+                            font-size: 32px;
+                            letter-spacing: 2px;
+                            fill: #2c3e50;
+                            transform-origin: 80px 25px;
+                            animation: fadeText 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+                        }
+                        .eyes-group {
+                            transform-origin: 80px 25px;
+                            animation: fadeEyes 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+                            opacity: 0;
+                        }
+                        .pupil { animation: lookAround 8s infinite; }
+                        @keyframes fadeText {
+                            0%, 25% { opacity: 1; transform: scale(1); }
+                            30%, 70% { opacity: 0; transform: scale(0.8); pointer-events: none; }
+                            75%, 100% { opacity: 1; transform: scale(1); }
+                        }
+                        @keyframes fadeEyes {
+                            0%, 25% { opacity: 0; transform: scale(0.8); pointer-events: none; }
+                            30%, 70% { opacity: 1; transform: scale(1); }
+                            75%, 100% { opacity: 0; transform: scale(0.8); pointer-events: none; }
+                        }
+                        @keyframes lookAround {
+                            0%, 30% { transform: translate(0, 0); }
+                            35%, 42% { transform: translate(-6px, 0); }
+                            46%, 54% { transform: translate(6px, -3px); }
+                            58%, 65% { transform: translate(0px, 4px); }
+                            70%, 100% { transform: translate(0, 0); }
+                        }
+                        </style>
+                    </defs>
+                    <text x="80" y="36" class="text-sear" text-anchor="middle">SEAR</text>
+                    <g class="eyes-group">
+                        <g>
+                            <path d="M 45 25 Q 60 10 75 25 Q 60 40 45 25 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="3.5" stroke-linejoin="round" />
+                            <circle cx="60" cy="25" r="5.5" fill="#2c3e50" class="pupil" />
+                        </g>
+                        <g>
+                            <path d="M 85 25 Q 100 10 115 25 Q 100 40 85 25 Z" fill="#ffffff" stroke="#2c3e50" stroke-width="3.5" stroke-linejoin="round" />
+                            <circle cx="100" cy="25" r="5.5" fill="#2c3e50" class="pupil" />
+                        </g>
+                    </g>
+                </svg></span></a>
+        <ul class="nav-links">
+            <li><a href="index.html#works" class="active">Works</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </header>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span class="current">AI Tools</span>
+            </div>
+            <h1>AI Tools<br>Case Study</h1>
+            <p class="page-hero-desc">Exploring AI-assisted design workflows — from generating concepts and brainstorming ideas to comparing tools and delivering final outputs for real campaigns and sharing it with the team.</p>
+        </div>
+        <div class="page-hero-meta">
+            <span class="project-count">03</span>
+            <span class="project-count-label">Case Studies</span>
+        </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="page-body">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <p class="sidebar-section-title">Categories</p>
+                <nav class="sidebar-nav">
+                    <a href="brand.html"><span class="nav-dot"></span>Brand Identity</a>
+                    <a href="graphic.html"><span class="nav-dot"></span>Graphic Design</a>
+                    <a href="illustration.html"><span class="nav-dot"></span>Illustration</a>
+                    <a href="video.html"><span class="nav-dot"></span>Video</a>
+                    <a href="web.html"><span class="nav-dot"></span>Web Design</a>
+                    <a href="3d.html"><span class="nav-dot"></span>3D Graphic</a>
+                    <a href="ai.html" class="active"><span class="nav-dot"></span>AI Tools</a>
+                </nav>
+            </div>
+            <div class="sidebar-section">
+                <p class="sidebar-section-title">On This Page</p>
+                <nav class="jump-nav" id="jumpNav">
+                    <a href="#proj-1" class="jump-link active">Adobe Firefly — Nano Banana</a>
+                    <a href="#proj-2" class="jump-link">Midjourney — Brainstorming</a>
+                    <a href="#proj-3" class="jump-link">MJ vs Firefly — Comparison</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <main class="content">
+
+            <!-- PROJECT 1 — Adobe Firefly / Nano Banana Pro -->
+            <div class="project-block reveal" id="proj-1">
+                <div class="project-tag">Creating On-Brand Banners with Adobe Firefly</div>
+
+                <!-- Result output — slide 1 as hero image -->
+                <p class="result-label">Result Output</p>
+                <div class="result-wrap img-single">
+                    <img src="images/portfolio/ai/DSGN-11550-VJ-JP-MAILER-600x326.png" alt="Adobe Firefly — Nano Banana Pro Result">
+                </div>
+
+                <!-- All slides grid -->
+                <p class="slides-label">Presentation Slides &nbsp;·&nbsp; 15 pages</p>
+                <div class="slide-grid">
+                    <div class="img-cell" data-slide="01"><img src="images/portfolio/ai/proj1_1.jpg" alt="Slide 1"></div>
+                    <div class="img-cell" data-slide="02"><img src="images/portfolio/ai/proj1_2.jpg" alt="Slide 2"></div>
+                    <div class="img-cell" data-slide="03"><img src="images/portfolio/ai/proj1_3.jpg" alt="Slide 3"></div>
+                    <div class="img-cell" data-slide="04"><img src="images/portfolio/ai/proj1_4.jpg" alt="Slide 4"></div>
+                    <div class="img-cell" data-slide="05"><img src="images/portfolio/ai/proj1_5.jpg" alt="Slide 5"></div>
+                    <div class="img-cell" data-slide="06"><img src="images/portfolio/ai/proj1_6.jpg" alt="Slide 6"></div>
+                    <div class="img-cell" data-slide="07"><img src="images/portfolio/ai/proj1_7.jpg" alt="Slide 7"></div>
+                    <div class="img-cell" data-slide="08"><img src="images/portfolio/ai/proj1_8.jpg" alt="Slide 8"></div>
+                    <div class="img-cell" data-slide="09"><img src="images/portfolio/ai/proj1_9.jpg" alt="Slide 9"></div>
+                    <div class="img-cell" data-slide="10"><img src="images/portfolio/ai/proj1_10.jpg" alt="Slide 10"></div>
+                    <div class="img-cell" data-slide="11"><img src="images/portfolio/ai/proj1_11.jpg" alt="Slide 11"></div>
+                    <div class="img-cell" data-slide="12"><img src="images/portfolio/ai/proj1_12.jpg" alt="Slide 12"></div>
+                    <div class="img-cell" data-slide="13"><img src="images/portfolio/ai/proj1_13.jpg" alt="Slide 13"></div>
+                    <div class="img-cell" data-slide="14"><img src="images/portfolio/ai/proj1_14.jpg" alt="Slide 14"></div>
+                    <div class="img-cell" data-slide="15"><img src="images/portfolio/ai/proj1_15.jpg" alt="Slide 15"></div>
+                </div>
+
+                <div class="project-info">
+                    <div class="info-cell">
+                        <p class="info-label">AI Tool</p>
+                        <p class="info-val">Adobe Firefly (Nano Banana Pro)</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Company/Brand</p>
+                        <p class="info-val">Sliverspin/VeraJohn</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Info/Result</p>
+                        <p class="info-val">Reducing the work from 1 day to 2 hours results in a 75% reduction in time.</p>
+                    </div>
+                    <div class="info-cell" style="grid-column: span 2;">
+                        <p class="info-label">Focus</p>
+                        <div class="resp-pills">
+                            <span class="resp-pill">AI Image Generation</span>
+                            <span class="resp-pill">On-Brand Output</span>
+                            <span class="resp-pill">Banner Production</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- PROJECT 2 — Midjourney Brainstorming -->
+            <div class="project-block reveal" id="proj-2">
+                <div class="project-tag">Exploring Banner Creation &amp; Brainstorming with Midjourney</div>
+
+                <!-- Result output -->
+                <p class="result-label">Result Output</p>
+                <div class="result-wrap img-single">
+                    <img src="images/portfolio/ai/Midjourny create VJ banner-v1-20250415.gif" alt="Midjourney Brainstorming Result">
+                </div>
+
+                <!-- All slides grid -->
+                <p class="slides-label">Presentation Slides &nbsp;·&nbsp; 22 pages</p>
+                <div class="slide-grid">
+                    <div class="img-cell" data-slide="01"><img src="images/portfolio/ai/proj2_1.jpg" alt="Slide 1"></div>
+                    <div class="img-cell" data-slide="02"><img src="images/portfolio/ai/proj2_2.jpg" alt="Slide 2"></div>
+                    <div class="img-cell" data-slide="03"><img src="images/portfolio/ai/proj2_3.jpg" alt="Slide 3"></div>
+                    <div class="img-cell" data-slide="04"><img src="images/portfolio/ai/proj2_4.jpg" alt="Slide 4"></div>
+                    <div class="img-cell" data-slide="05"><img src="images/portfolio/ai/proj2_5.jpg" alt="Slide 5"></div>
+                    <div class="img-cell" data-slide="06"><img src="images/portfolio/ai/proj2_6.jpg" alt="Slide 6"></div>
+                    <div class="img-cell" data-slide="07"><img src="images/portfolio/ai/proj2_7.jpg" alt="Slide 7"></div>
+                    <div class="img-cell" data-slide="08"><img src="images/portfolio/ai/proj2_8.jpg" alt="Slide 8"></div>
+                    <div class="img-cell" data-slide="09"><img src="images/portfolio/ai/proj2_9.jpg" alt="Slide 9"></div>
+                    <div class="img-cell" data-slide="10"><img src="images/portfolio/ai/proj2_10.jpg" alt="Slide 10"></div>
+                    <div class="img-cell" data-slide="11"><img src="images/portfolio/ai/proj2_11.jpg" alt="Slide 11"></div>
+                    <div class="img-cell" data-slide="12"><img src="images/portfolio/ai/proj2_12.jpg" alt="Slide 12"></div>
+                    <div class="img-cell" data-slide="13"><img src="images/portfolio/ai/proj2_13.jpg" alt="Slide 13"></div>
+                    <div class="img-cell" data-slide="14"><img src="images/portfolio/ai/proj2_14.jpg" alt="Slide 14"></div>
+                    <div class="img-cell" data-slide="15"><img src="images/portfolio/ai/proj2_15.jpg" alt="Slide 15"></div>
+                    <div class="img-cell" data-slide="16"><img src="images/portfolio/ai/proj2_16.jpg" alt="Slide 16"></div>
+                    <div class="img-cell" data-slide="17"><img src="images/portfolio/ai/proj2_17.jpg" alt="Slide 17"></div>
+                    <div class="img-cell" data-slide="18"><img src="images/portfolio/ai/proj2_18.jpg" alt="Slide 18"></div>
+                    <div class="img-cell" data-slide="19"><img src="images/portfolio/ai/proj2_19.jpg" alt="Slide 19"></div>
+                    <div class="img-cell" data-slide="20"><img src="images/portfolio/ai/proj2_20.jpg" alt="Slide 20"></div>
+                    <div class="img-cell" data-slide="21"><img src="images/portfolio/ai/proj2_21.jpg" alt="Slide 21"></div>
+                    <div class="img-cell" data-slide="22"><img src="images/portfolio/ai/proj2_22.jpg" alt="Slide 22"></div>
+                </div>
+
+                <div class="project-info">
+                    <div class="info-cell">
+                        <p class="info-label">AI Tool</p>
+                        <p class="info-val">Midjourney</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Company/Brand</p>
+                        <p class="info-val">Sliverspin/VeraJohn</p>
+                    </div>
+                    <div class="info-cell" style="grid-column: span 2;">
+                        <p class="info-label">Focus</p>
+                        <div class="resp-pills">
+                            <span class="resp-pill">AI Image Generation</span>
+                            <span class="resp-pill">Creative Brainstorming</span>
+                            <span class="resp-pill">Banner Concepts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- PROJECT 3 — MJ vs Firefly Comparison -->
+            <div class="project-block reveal" id="proj-3">
+                <div class="project-tag">Researching Midjourney vs. Adobe Firefly — Tool Comparison</div>
+
+                <!-- Result output -->
+                
+                <div class="result-wrap img-single">
+                    <img src="images/portfolio/ai/proj3_1.jpg" alt="MJ vs Firefly Comparison Result">
+                </div>
+
+                <!-- All slides grid -->
+                <p class="slides-label">Presentation Slides &nbsp;·&nbsp; 23 pages</p>
+                <div class="slide-grid">
+                    <div class="img-cell" data-slide="01"><img src="images/portfolio/ai/proj3_1.jpg" alt="Slide 1"></div>
+                    <div class="img-cell" data-slide="02"><img src="images/portfolio/ai/proj3_2.jpg" alt="Slide 2"></div>
+                    <div class="img-cell" data-slide="03"><img src="images/portfolio/ai/proj3_3.jpg" alt="Slide 3"></div>
+                    <div class="img-cell" data-slide="04"><img src="images/portfolio/ai/proj3_4.jpg" alt="Slide 4"></div>
+                    <div class="img-cell" data-slide="05"><img src="images/portfolio/ai/proj3_5.jpg" alt="Slide 5"></div>
+                    <div class="img-cell" data-slide="06"><img src="images/portfolio/ai/proj3_6.jpg" alt="Slide 6"></div>
+                    <div class="img-cell" data-slide="07"><img src="images/portfolio/ai/proj3_7.jpg" alt="Slide 7"></div>
+                    <div class="img-cell" data-slide="08"><img src="images/portfolio/ai/proj3_8.jpg" alt="Slide 8"></div>
+                    <div class="img-cell" data-slide="09"><img src="images/portfolio/ai/proj3_9.jpg" alt="Slide 9"></div>
+                    <div class="img-cell" data-slide="10"><img src="images/portfolio/ai/proj3_10.jpg" alt="Slide 10"></div>
+                    <div class="img-cell" data-slide="11"><img src="images/portfolio/ai/proj3_11.jpg" alt="Slide 11"></div>
+                    <div class="img-cell" data-slide="12"><img src="images/portfolio/ai/proj3_12.jpg" alt="Slide 12"></div>
+                    <div class="img-cell" data-slide="13"><img src="images/portfolio/ai/proj3_13.jpg" alt="Slide 13"></div>
+                    <div class="img-cell" data-slide="14"><img src="images/portfolio/ai/proj3_14.jpg" alt="Slide 14"></div>
+                    <div class="img-cell" data-slide="15"><img src="images/portfolio/ai/proj3_15.jpg" alt="Slide 15"></div>
+                    <div class="img-cell" data-slide="16"><img src="images/portfolio/ai/proj3_16.jpg" alt="Slide 16"></div>
+                    <div class="img-cell" data-slide="17"><img src="images/portfolio/ai/proj3_17.jpg" alt="Slide 17"></div>
+                    <div class="img-cell" data-slide="18"><img src="images/portfolio/ai/proj3_18.jpg" alt="Slide 18"></div>
+                    <div class="img-cell" data-slide="19"><img src="images/portfolio/ai/proj3_19.jpg" alt="Slide 19"></div>
+                    <div class="img-cell" data-slide="20"><img src="images/portfolio/ai/proj3_20.jpg" alt="Slide 20"></div>
+                    <div class="img-cell" data-slide="21"><img src="images/portfolio/ai/proj3_21.jpg" alt="Slide 21"></div>
+                    <div class="img-cell" data-slide="22"><img src="images/portfolio/ai/proj3_22.jpg" alt="Slide 22"></div>
+                    <div class="img-cell" data-slide="23"><img src="images/portfolio/ai/proj3_23.jpg" alt="Slide 23"></div>
+                </div>
+
+                <div class="project-info">
+                    <div class="info-cell">
+                        <p class="info-label">AI Tools</p>
+                        <p class="info-val">Midjourney &amp; Adobe Firefly</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Date</p>
+                        <p class="info-val">Early 2025</p>
+                    </div>
+                    <div class="info-cell">
+                        <p class="info-label">Company</p>
+                        <p class="info-val">Sliverspin</p>
+                    </div>
+                    <div class="info-cell" style="grid-column: span 2;">
+                        <p class="info-label">Focus</p>
+                        <div class="resp-pills">
+                            <span class="resp-pill">Tool Comparison</span>
+                            <span class="resp-pill">Research</span>
+                            <span class="resp-pill">Quality Analysis</span>
+                            <span class="resp-pill">Workflow Evaluation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lbClose">✕</button>
+        <img src="" alt="" id="lbImg">
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="index.html" class="footer-logo">SEAR<span>.</span></a>
+        <span>© 2025 Searwong. All rights reserved.</span>
+        <a href="index.html#works">← Back to Works</a>
+    </footer>
+
+    <script>
+        /* ── CURSOR ── */
+        const dot = document.getElementById('cursorDot'),
+            ring = document.getElementById('cursorRing');
+        let mx = 0, my = 0, rx = 0, ry = 0;
+        document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; dot.style.left = mx + 'px'; dot.style.top = my + 'px'; });
+        (function animRing() { rx += (mx - rx) * .13; ry += (my - ry) * .13; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(animRing); })();
+        document.querySelectorAll('a,button,.img-cell').forEach(el => {
+            el.addEventListener('mouseenter', () => { dot.classList.add('hovered'); ring.classList.add('hovered'); });
+            el.addEventListener('mouseleave', () => { dot.classList.remove('hovered'); ring.classList.remove('hovered'); });
+        });
+        document.addEventListener('mousedown', () => dot.classList.add('clicked'));
+        document.addEventListener('mouseup', () => dot.classList.remove('clicked'));
+
+        /* ── BURGER ── */
+        const burger = document.getElementById('burger'), mobileMenu = document.getElementById('mobileMenu');
+        let menuOpen = false;
+        function closeMobileMenu() { menuOpen = false; burger.classList.remove('open'); mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+        burger.addEventListener('click', () => { menuOpen = !menuOpen; burger.classList.toggle('open', menuOpen); mobileMenu.classList.toggle('open', menuOpen); document.body.style.overflow = menuOpen ? 'hidden' : ''; });
+
+        /* ── LIGHTBOX — works on both .img-single and .slide-grid images ── */
+        const lightbox = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg');
+        document.querySelectorAll('.img-single img, .img-cell img').forEach(img => {
+            img.addEventListener('click', () => { lbImg.src = img.src; lightbox.classList.add('open'); });
+        });
+        document.getElementById('lbClose').addEventListener('click', () => lightbox.classList.remove('open'));
+        lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
+
+        /* ── SCROLL REVEAL ── */
+        const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+        /* ── JUMP NAV ── */
+        const jumpLinks = document.querySelectorAll('.jump-link');
+        const jumpObs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { jumpLinks.forEach(l => l.classList.remove('active')); const link = document.querySelector(`.jump-link[href="#${e.target.id}"]`); if (link) link.classList.add('active'); } }); }, { rootMargin: '-20% 0px -60% 0px' });
+        document.querySelectorAll('.project-block').forEach(p => jumpObs.observe(p));
+    </script>
+</body>
+
+</html>

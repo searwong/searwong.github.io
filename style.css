@@ -2216,6 +2216,11 @@ footer a:hover {
         align-items: flex-start;
         gap: 0.6rem;
     }
+
+    .portfolio-card-cat {
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+    }
 }
 
 /* Small mobile */
@@ -2439,3 +2444,85 @@ footer a:hover {
         padding: 0.3rem 0.6rem;
     }
 }
+
+ /* ── SLIDE GRID — 4 per row ── */
+        .slide-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.6rem;
+            align-items: start;
+        }
+        .slide-grid .img-cell {
+            position: relative;
+            overflow: hidden;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            cursor: none;
+        }
+        .slide-grid .img-cell img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .slide-grid .img-cell:hover img {
+            transform: scale(1.03);
+            opacity: 0.9;
+        }
+        /* Slide number badge */
+        .slide-grid .img-cell::after {
+            content: attr(data-slide);
+            position: absolute;
+            bottom: 0.35rem; right: 0.4rem;
+            font-size: 0.5rem;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.7);
+            background: rgba(20,18,16,0.45);
+            padding: 0.15rem 0.4rem;
+            pointer-events: none;
+        }
+        /* Result image — prominent, with a label */
+        .result-wrap {
+            position: relative;
+        }
+        .result-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.7rem;
+        }
+        .result-label::before {
+            content: '';
+            width: 18px; height: 1.5px;
+            background: var(--accent);
+        }
+        /* Slides section label */
+        .slides-label {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.6rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 0.7rem;
+        }
+        .slides-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        @media (max-width: 900px) {
+            .slide-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 540px) {
+            .slide-grid { grid-template-columns: repeat(2, 1fr); gap: 0.4rem; }
+        }
