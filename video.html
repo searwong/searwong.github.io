@@ -327,37 +327,55 @@
         my = 0,
         rx = 0,
         ry = 0;
-    document.addEventListener('mousemove', e => { mx = e.clientX;
+    document.addEventListener('mousemove', e => {
+        mx = e.clientX;
         my = e.clientY;
         dot.style.left = mx + 'px';
-        dot.style.top = my + 'px'; });
-    (function animRing() { rx += (mx - rx) * .13;
+        dot.style.top = my + 'px';
+    });
+    (function animRing() {
+        rx += (mx - rx) * .13;
         ry += (my - ry) * .13;
         ring.style.left = rx + 'px';
         ring.style.top = ry + 'px';
-        requestAnimationFrame(animRing); })();
-    document.querySelectorAll('a,button,.img-cell').forEach(el => { el.addEventListener('mouseenter', () => { dot.classList.add('hovered');
-            ring.classList.add('hovered'); });
-        el.addEventListener('mouseleave', () => { dot.classList.remove('hovered');
-            ring.classList.remove('hovered'); }); });
+        requestAnimationFrame(animRing);
+    })();
+    document.querySelectorAll('a,button,.img-cell').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            dot.classList.add('hovered');
+            ring.classList.add('hovered');
+        });
+        el.addEventListener('mouseleave', () => {
+            dot.classList.remove('hovered');
+            ring.classList.remove('hovered');
+        });
+    });
     document.addEventListener('mousedown', () => dot.classList.add('clicked'));
     document.addEventListener('mouseup', () => dot.classList.remove('clicked'));
     const burger = document.getElementById('burger'),
         mobileMenu = document.getElementById('mobileMenu');
     let menuOpen = false;
 
-    function closeMobileMenu() { menuOpen = false;
+    function closeMobileMenu() {
+        menuOpen = false;
         burger.classList.remove('open');
         mobileMenu.classList.remove('open');
-        document.body.style.overflow = ''; }
-    burger.addEventListener('click', () => { menuOpen = !menuOpen;
+        document.body.style.overflow = '';
+    }
+    burger.addEventListener('click', () => {
+        menuOpen = !menuOpen;
         burger.classList.toggle('open', menuOpen);
         mobileMenu.classList.toggle('open', menuOpen);
-        document.body.style.overflow = menuOpen ? 'hidden' : ''; });
+        document.body.style.overflow = menuOpen ? 'hidden' : '';
+    });
     const lightbox = document.getElementById('lightbox'),
         lbImg = document.getElementById('lbImg');
-    document.querySelectorAll('.img-single img').forEach(img => { img.addEventListener('click', () => { lbImg.src = img.src;
-            lightbox.classList.add('open'); }); });
+    document.querySelectorAll('.img-single img, .img-cell img').forEach(img => {
+        img.addEventListener('click', () => {
+            lbImg.src = img.src;
+            lightbox.classList.add('open');
+        });
+    });
     document.getElementById('lbClose').addEventListener('click', () => lightbox.classList.remove('open'));
     lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('open'); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
@@ -367,17 +385,16 @@
     const jumpObs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { jumpLinks.forEach(l => l.classList.remove('active')); const link = document.querySelector(`.jump-link[href="#${e.target.id}"]`); if (link) link.classList.add('active'); } }); }, { rootMargin: '-20% 0px -60% 0px' });
     document.querySelectorAll('.project-block').forEach(p => jumpObs.observe(p));
     </script>
-
-  <script>
+    <script>
     /* Cap each video at its natural encoded width — won't scale up beyond source size */
     document.querySelectorAll('.media-embed video').forEach(v => {
-      v.addEventListener('loadedmetadata', () => {
-        if (v.videoWidth) {
-          v.style.maxWidth = v.videoWidth + 'px';
-        }
-      });
+        v.addEventListener('loadedmetadata', () => {
+            if (v.videoWidth) {
+                v.style.maxWidth = v.videoWidth + 'px';
+            }
+        });
     });
-  </script>
+    </script>
 </body>
 
 </html>

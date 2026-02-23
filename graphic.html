@@ -461,7 +461,7 @@
     /* ── LIGHTBOX ── */
     const lightbox = document.getElementById('lightbox');
     const lbImg    = document.getElementById('lbImg');
-    document.querySelectorAll('.img-cell img').forEach(img => {
+    document.querySelectorAll('.img-single img, .img-cell img').forEach(img => {
       img.style.cursor = 'none';
       img.addEventListener('click', () => { lbImg.src = img.src; lightbox.classList.add('open'); });
     });

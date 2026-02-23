@@ -166,7 +166,7 @@
     function closeMobileMenu(){menuOpen=false;burger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow='';}
     burger.addEventListener('click',()=>{menuOpen=!menuOpen;burger.classList.toggle('open',menuOpen);mobileMenu.classList.toggle('open',menuOpen);document.body.style.overflow=menuOpen?'hidden':'';});
     const lightbox=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg');
-    document.querySelectorAll('.img-single img').forEach(img=>{img.addEventListener('click',()=>{lbImg.src=img.src;lightbox.classList.add('open');});});
+    document.querySelectorAll('.img-single img, .img-cell img').forEach(img=>{img.addEventListener('click',()=>{lbImg.src=img.src;lightbox.classList.add('open');});});
     document.getElementById('lbClose').addEventListener('click',()=>lightbox.classList.remove('open'));
     lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.classList.remove('open');});
     document.addEventListener('keydown',e=>{if(e.key==='Escape')lightbox.classList.remove('open');});
